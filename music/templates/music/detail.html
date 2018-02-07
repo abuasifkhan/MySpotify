@@ -15,7 +15,7 @@
     {% csrf_token %}
     {% for song in album.song_set.all %}
         <input type="radio" id="song{{forloop.counter}}" name="song" value="{{song.id}}"/>
-        <label for="song {{forloop.counter}}">
+        <label for="song{{forloop.counter}}">
             {{song.song_title}}
             {% if song.is_favorite is True %}
                 <img src="http://i.imgur.com/b9b13Rd.png" />
