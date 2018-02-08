@@ -31,14 +31,14 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a class="" href="{% url 'music:index' %}">
-                            <span class="glyphicon glyphicon-cd" area-hidden="true">
+                            <span class="glyphicon glyphicon-cd" aria-hidden="true">
                             Albums
                             </span>
                         </a>
                     </li>
                     <li class="">
                         <a class="" href="#">
-                            <span class="glyphicon glyphicon-music" area-hidden="true">
+                            <span class="glyphicon glyphicon-music" aria-hidden="true">
                             Songs
                             </span>
                         </a>
@@ -54,15 +54,13 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="">
-                        <a class="" href="#">
-                            <span class="glyphicon glyphicon-plus" area-hidden="true">
-                            Add Album
-                            </span>
+                        <a class="" href="{% url 'music:album-add' %}">
+                            <span class="glyphicon glyphicon-plus">Add Album</span>
                         </a>
                     </li>
                     <li class="">
                         <a class="" href="#">
-                            <span class="glyphicon glyphicon-off" area-hidden="true">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true">
                             Logout
                             </span>
                         </a>
@@ -74,8 +72,11 @@
 
 
     </nav>
-    {% block body %}
+    <div class="contents-below-navbar">
+        {% block body %}
 
-    {% endblock %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>
